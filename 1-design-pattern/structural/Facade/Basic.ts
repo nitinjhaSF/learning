@@ -35,6 +35,7 @@ class NotificationService {
     const connect = server.connect("192.161.1.1");
     const authToken = server.authenticate("app", "key");
     server.send(authToken, new Message(message), target);
+    connect.disconnect();
   }
 }
 
